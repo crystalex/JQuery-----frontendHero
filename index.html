@@ -1,0 +1,84 @@
+<html>
+
+   <head>
+      <title>Exemplu JQuery</title>
+	  <base href="https://www.tutorialspoint.com" />
+      <script type = "text/javascript" 
+         src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		
+      <script type = "text/javascript" language = "javascript">
+         $(document).ready(function() {
+//           var title = $("em").attr("title");
+//             $("#divid").text(title);
+// 			$("#myimg").attr("src", "/jquery/images/jquery.jpg");
+// 			var content = $("p").html();
+//            $("#pid2").html( content ); 
+          $("li").filter(".middle").addClass("selected");
+          $("li.bottom").addClass("green");
+		  $("p").find("span").addClass("selected");
+		  $("p").filter("#test").addClass("green");
+		 $("#click").click(function() {
+			var content = $("input").val();
+			$("p#pid2").text(content);
+		 });
+		 $("#moveValue").click(function() {
+			var content = $("input").val();
+			$("#secondInput").val(content);
+		 });
+		 }); 
+		 
+        
+// 		 $("#add").click(function() {
+//		 $("em").addClass("selected");
+//		 $("#divid").addClass("highlight");
+//		 });
+//		$("#remove").click(function() {
+//		$("em").removeClass("selected");
+//		 $("#divid").removeClass("highlight");
+//		 });
+//		$("#toggle").click(function() {
+//	    $("em").toggleClass("selected");
+//		 $("#divid").toggleClass("highlight");
+//		 });
+//		  }); 
+      </script>
+	        <style>
+         .selected { color:red; }
+         .highlight { background:yellow; }
+		 .green { color: blue; }
+      </style>	
+   </head>
+	
+   <body>
+      <div>
+<!--          <em title = "Use tabs, not spaces">Acesta e primul paragraf.</em>
+         <p id = "myid">Uite-l si pe al doilea.</p>
+         <div id = "divid"></div>
+		 <img id = "myimg" src = "/images/jquery.jpg" alt = "Sample image" /> -->
+		 <input type="text" value="First Input Box"/>
+		 <input type="text" id="secondInput"value="Second Input Box"/>
+	  <p class = "selected" id = "pid1">Eu sunt<i> primul</i></p>
+      <p class = "highlight" id = "pid2">Al doilea</p>
+	  
+	  <button type="button" id="click">click me</button>
+	  <button type="button" id="moveValue">move value</button>
+	           <ul>
+            <li class = "top">list item 1</li>
+            <li class = "top">list item 2</li>
+            <li class = "middle">list item 3</li>
+            <li class = "middle">list item 4</li>
+            <li class = "bottom">list item 5</li>
+            <li class = "bottom">list item 6</li>
+			
+	  <p>FIND SPAN TEST 1 <span>THIS IS RED</span></p>
+      <p id="test">FIND SPAN TEST 2<span>THIS IS ALSO RED</span>
+         </ul>
+      </div>
+   </body>
+	
+
+<!-- 	<button id="add">Add</button>
+	<button id="remove">Remove</button>
+	<button id="toggle">Toggle</button> -->
+	
+</html>
